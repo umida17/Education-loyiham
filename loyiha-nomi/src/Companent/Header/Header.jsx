@@ -42,12 +42,12 @@ const Header = () => {
     <header className="header-section">
       <div className="container">
         <div className="header-container">
-          {/* Logo qismi */}
-          <div className="logo-box">
+           <div className="logo-box">
             <img src={educarion} alt="Education Logo" className="logo-img" />
           </div>
 
-           <nav className="nav-menu">
+          <div className="education">
+              <nav className="nav-menu">
             <div className="select-wrapper">
               <select className="nav-select">
                 <option value="Home">{t.home}</option>
@@ -93,6 +93,8 @@ const Header = () => {
             <button className="signup-btn">
               <a href="#">{t.signup}</a>
             </button>
+          </div>
+          
           </div>
         </div>
       </div>
