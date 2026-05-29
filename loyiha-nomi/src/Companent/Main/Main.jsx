@@ -1,7 +1,7 @@
 import React from 'react';
 import './Main.css';
 
-// O'ZINGIZNING ESKI RASMLARINGIZ (Aynan siz yozgan nomlar saqlandi)
+// O'ZINGIZNING ESKI RASMLARINGIZ
 import aboutImg from '../../assets/mons.png'; 
 import courseImg1 from '../../assets/win.png'; 
 import courseImg2 from '../../assets/dars.png';
@@ -11,23 +11,21 @@ import courseImg5 from '../../assets/win.png';
 import courseImg6 from '../../assets/fred.png';
 import avatarImg from '../../assets/Ellipse 22.png'; 
 
-// YANGI BLOKLAR UCHUN RASMLAR (image_bad477.jpg loyihasidan)
-import mentorImg1 from '../../assets/uns.png.';
+// YANGI BLOKLAR UCHUN RASMLAR (Tuzatildi: uns.png ketidagi ortiqcha nuqta olib tashlandi)
+import mentorImg1 from '../../assets/uns.png';
 import mentorImg2 from '../../assets/reang.png';
 import mentorImg3 from '../../assets/school.png';
 import eventImg1 from '../../assets/Frame 106.png';
 import eventImg2 from '../../assets/Frame 109.png';
-import eventImg3 from '../../assets/event3.jpg';
+import eventImg3 from '../../assets/Frame 111.png';
 
 const mainTranslations = {
   uz: {
-    // Section 1: About
     title: "Yorqin Kelajakni Ta'minlaydigan Kursingizni Toping",
     desc1: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultricies at diam magnis faucibus et faucibus gravida. Malesuada fauci bus iaculis eu. Fusce est, consectetur tempor penatibus sed. Ut dolor, vulputate quam nec aliquam aliquam nisl.",
     desc2: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam et hendrerit euismod fusce sit.",
     btnText: "Batafsil ma'lumot",
     
-    // Section 2: How It Works
     sectionTitle: "Biz Qanday Ishlaymiz",
     sectionDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam et hendrerit euismod fusce sit.",
     cards: [
@@ -37,7 +35,6 @@ const mainTranslations = {
       { id: 4, title: "Umrbod Qo'llab-quvvatlash", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam et hendrerit eui smod fusce sit." }
     ],
 
-    // Section 3: Courses
     coursesTitle: "Bizning Barcha Onlayn Kurslarimiz",
     coursesDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Placerat mauris non dictumst in leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     viewAllBtn: "Barcha Kurslarni Ko'rish",
@@ -46,11 +43,10 @@ const mainTranslations = {
       { id: 2, img: courseImg2, category: "Android Developer", price: "$130", desc: "Lorem ipsum dolor sit amet, consecte adipiscing elit. Placerat mauris non dictumst in leo. Lorem ipsum dolor sit." },
       { id: 3, img: courseImg3, category: "Java Script Course", price: "$140", desc: "Lorem ipsum dolor sit amet, consecte adipiscing elit. Placerat mauris non dictumst in leo. Lorem ipsum dolor sit." },
       { id: 4, img: courseImg4, category: "Android Developer", price: "$120", desc: "Lorem ipsum dolor sit amet, consecte adipiscing elit. Placerat mauris non dictumst in leo. Lorem ipsum dolor sit." },
-      { id: 5, img: courseImg5, category: "Java Script Course", price: "$120", desc: "Lorem ipsum dolor sit amet, consecte adipiscing elit. Placerat mauris non dictumst in leo. Lorem ipsum dolor sit." },
+      { id: 5, img: courseImg5, category: "Java Script Course", price: "$120", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Placerat mauris non dictumst in leo. Lorem ipsum dolor sit." },
       { id: 6, img: courseImg6, category: "Basic Marketing", price: "$100", desc: "Lorem ipsum dolor sit amet, consecte adipiscing elit. Placerat mauris non dictumst in leo. Lorem ipsum dolor sit." }
     ],
 
-    // Section 4: Mentors (YANGI)
     mentorsTitle: "Bizning Mentorlar Bilani Tanishing",
     mentorsDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Met, vestibulum euismod nullam elementum. Urna, posuere nisi sit gravida massa.",
     mentorList: [
@@ -59,7 +55,6 @@ const mainTranslations = {
       { id: 3, img: mentorImg3, name: "Mohammod Ali", role: "Content Writter", students: "8.2k", rating: "4.5", courses: "25+ Kurslar" }
     ],
 
-    // Section 5: Events (YANGI)
     eventsTitle: "Kutilayotgan Tadbirlar",
     eventsDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Met, vestibulum euismod nullam elementum.",
     eventList: [
@@ -69,13 +64,11 @@ const mainTranslations = {
     ]
   },
   ru: {
-    // Section 1: About
     title: "Найдите курс, который сделает ваше будущее ярким",
     desc1: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultricies at diam magnis faucibus et faucibus gravida. Malesuada fauci bus iaculis eu. Fusce est, consectetur tempor penatibus sed. Ut dolor, vulputate quam nec aliquam aliquam nisl.",
     desc2: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam et hendrerit euismod fusce sit.",
     btnText: "Подробнее",
     
-    // Section 2: How It Works
     sectionTitle: "Как это работает",
     sectionDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam et hendrerit euismod fusce sit.",
     cards: [
@@ -85,7 +78,6 @@ const mainTranslations = {
       { id: 4, title: "Пожизненная поддержка", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam et hendrerit eui smod fusce sit." }
     ],
 
-    // Section 3: Courses
     coursesTitle: "Все наши онлайн-курсы",
     coursesDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Placerat mauris non dictumst in leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     viewAllBtn: "Посмотреть все курсы",
@@ -94,11 +86,10 @@ const mainTranslations = {
       { id: 2, img: courseImg2, category: "Android Developer", price: "$130", desc: "Lorem ipsum dolor sit amet, consecte adipiscing elit. Placerat mauris non dictumst in leo. Lorem ipsum dolor sit." },
       { id: 3, img: courseImg3, category: "Java Script Course", price: "$140", desc: "Lorem ipsum dolor sit amet, consecte adipiscing elit. Placerat mauris non dictumst in leo. Lorem ipsum dolor sit." },
       { id: 4, img: courseImg4, category: "Android Developer", price: "$120", desc: "Lorem ipsum dolor sit amet, consecte adipiscing elit. Placerat mauris non dictumst in leo. Lorem ipsum dolor sit." },
-      { id: 5, img: courseImg5, category: "Java Script Course", price: "$120", desc: "Lorem ipsum dolor sit amet, consecte adipiscing elit. Placerat mauris non dictumst in leo. Lorem ipsum dolor sit." },
+      { id: 5, img: courseImg5, category: "Java Script Course", price: "$120", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Placerat mauris non dictumst in leo. Lorem ipsum dolor sit." },
       { id: 6, img: courseImg6, category: "Basic Marketing", price: "$100", desc: "Lorem ipsum dolor sit amet, consecte adipiscing elit. Placerat mauris non dictumst in leo. Lorem ipsum dolor sit." }
     ],
 
-    // Section 4: Mentors
     mentorsTitle: "Встречайте наших менторов",
     mentorsDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Met, vestibulum euismod nullam elementum. Urna, posuere nisi sit gravida massa.",
     mentorList: [
@@ -107,7 +98,6 @@ const mainTranslations = {
       { id: 3, img: mentorImg3, name: "Mohammod Ali", role: "Content Writter", students: "8.2k", rating: "4.5", courses: "25+ Курсов" }
     ],
 
-    // Section 5: Events
     eventsTitle: "Предстоящие События",
     eventsDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Met, vestibulum euismod nullam elementum.",
     eventList: [
@@ -117,13 +107,11 @@ const mainTranslations = {
     ]
   },
   en: {
-    // Section 1: About
     title: "Find Your Course That Makes Bright Future",
     desc1: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultricies at diam magnis faucibus et faucibus gravida. Malesuada fauci bus iaculis eu. Fusce est, consectetur tempor penatibus sed. Ut dolor, vulputate quam nec aliquam aliquam nisl.",
     desc2: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam et hendrerit euismod fusce sit.",
     btnText: "Learn More",
     
-    // Section 2: How It Works
     sectionTitle: "How It Work",
     sectionDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam et hendrerit euismod fusce sit.",
     cards: [
@@ -133,7 +121,6 @@ const mainTranslations = {
       { id: 4, title: "Life Time Support", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam et hendrerit eui smod fusce sit." }
     ],
 
-    // Section 3: Courses
     coursesTitle: "Our All The Online Courses",
     coursesDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Placerat mauris non dictumst in leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     viewAllBtn: "View All Course",
@@ -146,7 +133,6 @@ const mainTranslations = {
       { id: 6, img: courseImg6, category: "Basic Marketing", price: "$100", desc: "Lorem ipsum dolor sit amet, consecte adipiscing elit. Placerat mauris non dictumst in leo. Lorem ipsum dolor sit." }
     ],
 
-    // Section 4: Mentors
     mentorsTitle: "Meet with Our Mentor",
     mentorsDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Met, vestibulum euismod nullam elementum. Urna, posuere nisi sit gravida massa.",
     mentorList: [
@@ -155,7 +141,6 @@ const mainTranslations = {
       { id: 3, img: mentorImg3, name: "Mohammod Ali", role: "Content Writter", students: "8.2k", rating: "4.5", courses: "25+ Courses" }
     ],
 
-    // Section 5: Events
     eventsTitle: "Upcoming Event",
     eventsDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Met, vestibulum euismod nullam elementum.",
     eventList: [
@@ -166,7 +151,6 @@ const mainTranslations = {
   }
 };
 
-// Section 2 uchun ikonkalar
 const section2Icons = [
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" key="s2-1"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4M12 11a2 2 0 100-4 2 2 0 000 4zM6 14c0-2 3-3 6-3s6 1 6 3"/></svg>,
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" key="s2-2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg>,
@@ -268,7 +252,7 @@ const Main = ({ lang }) => {
         </div>
       </section>
 
-      {/* ================= SECTION 4: MENTORS (YANGI BLOK) ================= */}
+      {/* ================= SECTION 4: MENTORS ================= */}
       <section className="mentors-section">
         <div className="container">
           <div className="mentors-header">
@@ -303,7 +287,7 @@ const Main = ({ lang }) => {
         </div>
       </section>
 
-      {/* ================= SECTION 5: EVENTS (YANGI BLOK) ================= */}
+      {/* ================= SECTION 5: EVENTS ================= */}
       <section className="events-section">
         <div className="container">
           <div className="events-header">
