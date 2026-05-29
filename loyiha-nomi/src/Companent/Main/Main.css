@@ -1,0 +1,217 @@
+/* Asosiy blok paddinglari */
+.about-section {
+  padding: 80px 0;
+  background-color: #ffffff;
+}
+
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+/* Chap taraf (Matnlar qismi) */
+.about-content {
+  flex: 1;
+  max-width: 550px;
+}
+
+.about-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 42px;
+  font-weight: 700;
+  color: #1a1a1a;
+  line-height: 1.25;
+  margin-bottom: 25px;
+}
+
+.about-text {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #666666;
+  margin-bottom: 20px;
+}
+
+.about-text.highlight {
+  font-weight: 500;
+  color: #333333;
+}
+
+/* "Learn More" Aktiv Ko'k Tugmasi */
+.about-btn {
+  background-color: #0066ff;
+  color: #ffffff;
+  border: none;
+  padding: 14px 35px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+  position: relative;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 102, 255, 0.2);
+}
+
+/* Tugmaga mishka kelgandagi aktiv holat */
+.about-btn:hover {
+  background-color: #0052cc;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 102, 255, 0.4);
+}
+
+.about-btn:active {
+  transform: translateY(0);
+}
+
+
+/* O'ng taraf (Rasm va Video joylashuvi) */
+.about-image-wrapper {
+  flex: 1;
+  position: relative;
+  max-width: 580px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.06);
+}
+
+.about-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+/* Rasm ustiga kelganda ozgina yaqinlashish effekti */
+.about-image-wrapper:hover .about-img {
+  transform: scale(1.03);
+}
+
+/* PLAY TUGMASI (Oq aylana) */
+.video-play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70px;
+  height: 70px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+/* Ichidagi ko'k uchburchak ikonka */
+.play-icon {
+  width: 25px;
+  height: 25px;
+  color: #0066ff;
+  margin-left: 4px; /* Markazda chiroyli turishi uchun */
+}
+
+/* Play tugmasi orqasidagi to'lqinli pulsatsiya effekti */
+.video-play-btn::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.6);
+  z-index: -1;
+  animation: pulseWave 2s infinite;
+}
+
+/* To'lqin animatsiyasi */
+@keyframes pulseWave {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+.video-play-btn:hover {
+  transform: translate(-50%, -50%) scale(1.1);
+  background-color: #0066ff;
+}
+
+.video-play-btn:hover .play-icon {
+  color: #ffffff; /* Ustiga kelganda ranglar teskari almashadi */
+}
+
+
+/* ==========================================
+   TO'LIQ RESPONSIVE QISMI (MEDIA QUERIES)
+========================================== */
+
+/* Planshetlar uchun (1024px dan kichik) */
+@media (max-width: 1024px) {
+  .about-title {
+    font-size: 34px;
+  }
+  .about-container {
+    gap: 30px;
+  }
+}
+
+/* Telefon formatiga o'tganda (768px dan kichik) */
+@media (max-width: 768px) {
+  .about-section {
+    padding: 50px 0;
+  }
+
+  /* Ustma-ust chiroyli column holatiga keltiramiz */
+  .about-container {
+    flex-direction: column;
+    text-align: center; /* Telefon ekranida matnlar o'rtaga tekislanadi */
+    gap: 40px;
+  }
+
+  .about-content {
+    max-width: 100%;
+  }
+
+  .about-title {
+    font-size: 28px;
+  }
+
+  .about-image-wrapper {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .video-play-btn {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .play-icon {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .about-btn {
+    width: 100%; /* Telefon ekranida tugma to'liq yoyiladi */
+    max-width: 300px;
+  }
+}
+
+/* Kichik telefonlar uchun (480px) */
+@media (max-width: 480px) {
+  .about-title {
+    font-size: 24px;
+  }
+  .about-text {
+    font-size: 14px;
+  }
+}
