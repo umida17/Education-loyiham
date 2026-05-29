@@ -1,24 +1,27 @@
-/* Asosiy blok paddinglari */
+/* ==========================================
+   GLOBAL CONTAINER & GENERAL
+========================================== */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* SECTION 1: ABOUT */
 .about-section {
   padding: 80px 0;
   background-color: #ffffff;
-  margin-top: 50px; /* Masofani biroz me'yorlashtirdim */
-  margin-bottom: 50px;
 }
-
 .about-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 50px;
 }
-
-/* Chap taraf (Matnlar qismi) */
 .about-content {
   flex: 1;
   max-width: 550px;
 }
-
 .about-title {
   font-family: 'Poppins', sans-serif;
   font-size: 42px;
@@ -27,20 +30,16 @@
   line-height: 1.25;
   margin-bottom: 25px;
 }
-
 .about-text {
   font-size: 15px;
   line-height: 1.6;
   color: #666666;
   margin-bottom: 20px;
 }
-
 .about-text.highlight {
   font-weight: 500;
   color: #333333;
 }
-
-/* "Learn More" Aktiv Ko'k Tugmasi */
 .about-btn {
   background-color: #0066ff;
   color: #ffffff;
@@ -50,23 +49,15 @@
   font-weight: 600;
   border-radius: 4px;
   cursor: pointer;
-  margin-top: 10px;
-  position: relative;
   transition: all 0.3s ease;
   box-shadow: 0 4px 15px rgba(0, 102, 255, 0.2);
 }
-
 .about-btn:hover {
   background-color: #0052cc;
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(0, 102, 255, 0.4);
 }
 
-.about-btn:active {
-  transform: translateY(0);
-}
-
-/* O'ng taraf (Rasm va Video) */
 .about-image-wrapper {
   flex: 1;
   position: relative;
@@ -75,7 +66,6 @@
   overflow: hidden;
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.06);
 }
-
 .about-img {
   width: 100%;
   height: auto;
@@ -83,11 +73,9 @@
   object-fit: cover;
   transition: transform 0.5s ease;
 }
-
 .about-image-wrapper:hover .about-img {
   transform: scale(1.03);
 }
-
 .video-play-btn {
   position: absolute;
   top: 50%;
@@ -105,14 +93,12 @@
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
   transition: all 0.3s ease;
 }
-
 .play-icon {
   width: 25px;
   height: 25px;
   color: #0066ff;
   margin-left: 4px;
 }
-
 .video-play-btn::before {
   content: '';
   position: absolute;
@@ -123,33 +109,30 @@
   z-index: -1;
   animation: pulseWave 2s infinite;
 }
-
 @keyframes pulseWave {
   0% { transform: scale(1); opacity: 1; }
   100% { transform: scale(1.5); opacity: 0; }
 }
-
 .video-play-btn:hover {
   transform: translate(-50%, -50%) scale(1.1);
   background-color: #0066ff;
 }
-
 .video-play-btn:hover .play-icon {
   color: #ffffff;
 }
 
-/* SECTION 2: WORKS STILI */
+/* ==========================================
+   SECTION 2: HOW IT WORKS
+========================================== */
 .works-section {
-  padding: 100px 0;
-  background-color: #fafbfe;
+  padding: 80px 0;
+  background-color: #ffffff;
 }
-
 .works-header {
   text-align: center;
   max-width: 650px;
-  margin: 0 auto 60px auto;
+  margin: 0 auto 50px auto;
 }
-
 .works-main-title {
   font-family: 'Poppins', sans-serif;
   font-size: 38px;
@@ -157,19 +140,16 @@
   color: #1a1a1a;
   margin-bottom: 15px;
 }
-
 .works-sub-desc {
   font-size: 15px;
   color: #666666;
   line-height: 1.6;
 }
-
 .works-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 30px;
+  gap: 25px;
 }
-
 .works-card {
   text-align: center;
   padding: 35px 25px;
@@ -178,7 +158,6 @@
   transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
   border: 1px solid #eef2f7;
 }
-
 .works-icon-box {
   width: 75px;
   height: 75px;
@@ -189,7 +168,6 @@
   justify-content: center;
   transition: all 0.3s ease;
 }
-
 .works-card-title {
   font-family: 'Poppins', sans-serif;
   font-size: 18px;
@@ -197,25 +175,177 @@
   color: #1a1a1a;
   margin-bottom: 12px;
 }
-
 .works-card-desc {
   font-size: 14px;
   color: #666666;
   line-height: 1.6;
 }
-
 .works-card:hover {
-  transform: translateY(-10px);
+  transform: translateY(-8px);
   box-shadow: 0 15px 35px rgba(0, 102, 255, 0.08);
-  border-color: rgba(0, 102, 255, 0.1);
+  border-color: rgba(0, 102, 255, 0.15);
   background-color: #fafbfe;
 }
 
-/* RESPONSIVE DESIGN */
+/* ==========================================
+   SECTION 3: COURSES (image_bc26c9.jpg stili)
+========================================== */
+.courses-section {
+  padding: 100px 0;
+  background-color: #ecf3fe; /* Rasm_bc26c9 dagi o'ziga xos och havorang fon */
+}
+.courses-header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 60px auto;
+}
+.courses-main-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 42px;
+  font-weight: 700;
+  color: #0b132a;
+  margin-bottom: 15px;
+}
+.courses-sub-desc {
+  font-size: 15px;
+  color: #656b7c;
+  line-height: 1.6;
+}
+
+/* 3 talik grid chiroyli joylashuv */
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+/* Karta Asosiy Stili */
+.course-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  border: 1px solid transparent;
+}
+
+.course-img-wrapper {
+  width: 100%;
+  height: 240px;
+  overflow: hidden;
+}
+.course-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+/* Kurs statistikasi qatori */
+.course-stats-bar {
+  display: flex;
+  align-items: center;
+  padding: 15px 25px;
+  border-bottom: 1px solid #f2f5fa;
+  gap: 15px;
+}
+.stat-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: #7a8293;
+}
+.stat-svg {
+  width: 16px;
+  height: 16px;
+  color: #a0a7b5;
+}
+.stat-author {
+  margin-left: auto; /* Avatarni o'ng chekkaga suradi */
+}
+.author-avatar-img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1.5px solid #ffffff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Sarlavha va Text qismi */
+.course-info-box {
+  padding: 25px;
+}
+.course-title-price {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+.course-cat-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #1d2538;
+  transition: color 0.3s ease;
+}
+.course-price-tag {
+  font-size: 20px;
+  font-weight: 700;
+  color: #0066ff; /* Narx ko'k rangda */
+}
+.course-card-text {
+  font-size: 14px;
+  color: #6f7787;
+  line-height: 1.6;
+}
+
+/* SECTION 3 HOVER EFFEKTI */
+.course-card:hover {
+  transform: translateY(-12px); /* 12px silliq tepaga ko'tariladi */
+  box-shadow: 0 22px 45px rgba(0, 102, 255, 0.09); /* To'qroq ko'k soya beradi */
+  border-color: rgba(0, 102, 255, 0.1);
+}
+.course-card:hover .course-card-img {
+  transform: scale(1.04); /* Rasm biroz yaqinlashadi */
+}
+.course-card:hover .course-cat-title {
+  color: #0066ff; /* Kurs nomi ko'k rangga o'zgaradi */
+}
+
+/* Pastdagi "View All Course" tugmasi */
+.courses-bottom-action {
+  text-align: center;
+  margin-top: 50px;
+}
+.view-all-courses-btn {
+  background-color: #0066ff;
+  color: #ffffff;
+  border: none;
+  padding: 15px 40px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 102, 255, 0.2);
+}
+.view-all-courses-btn:hover {
+  background-color: #0052cc;
+  box-shadow: 0 8px 25px rgba(0, 102, 255, 0.4);
+  transform: translateY(-2px);
+}
+
+/* ==========================================
+   MUKAMMAL RESPONSIVE (MEDIA QUERIES)
+========================================== */
 @media (max-width: 1024px) {
   .about-title { font-size: 34px; }
   .about-container { gap: 30px; }
-  .works-grid { grid-template-columns: repeat(2, 1fr); gap: 25px; }
+  .works-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+  .courses-grid { grid-template-columns: repeat(2, 1fr); gap: 25px; }
+  .courses-main-title { font-size: 34px; }
 }
 
 @media (max-width: 768px) {
@@ -224,10 +354,16 @@
   .about-title { font-size: 28px; }
   .about-image-wrapper { width: 100%; max-width: 100%; }
   .about-btn { width: 100%; max-width: 300px; }
+  
   .works-section { padding: 60px 0; }
   .works-main-title { font-size: 28px; }
+
+  .courses-section { padding: 60px 0; }
+  .courses-main-title { font-size: 28px; }
 }
 
-@media (max-width: 520px) {
+@media (max-width: 580px) {
   .works-grid { grid-template-columns: 1fr; gap: 20px; }
+  .courses-grid { grid-template-columns: 1fr; gap: 20px; }
+  .course-img-wrapper { height: 200px; }
 }
