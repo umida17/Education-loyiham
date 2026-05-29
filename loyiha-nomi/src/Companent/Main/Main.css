@@ -314,8 +314,7 @@
   color: #0066ff; /* Kurs nomi ko'k rangga o'zgaradi */
 }
 
-/* Pastdagi "View All Course" tugmasi */
-.courses-bottom-action {
+ .courses-bottom-action {
   text-align: center;
   margin-top: 50px;
 }
