@@ -5,7 +5,7 @@ import './Main.css';
 import aboutImg from '../../assets/mons.png'; 
 import courseImg1 from '../../assets/win.png'; // O'zingizdagi ixtiyoriy rasmlar
 import courseImg2 from '../../assets/dars.png';
-import courseImg3 from '../../assets/blue.pmg';
+import courseImg3 from '../../assets/blue.png';
 import courseImg4 from '../../assets/mr.png';
 import courseImg5 from '../../assets/win.png';
 import courseImg6 from '../../assets/fred.png';
