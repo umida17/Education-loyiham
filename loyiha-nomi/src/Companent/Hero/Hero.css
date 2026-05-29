@@ -125,11 +125,7 @@
   font-weight: 500;
 }
 
-/* ==========================================
-   RESPONSIVE (MOBIL MOSLASHUVCHANLIK)
-========================================== */
 
-/* Planshetlar uchun (992px dan kichik) */
 @media (max-width: 992px) {
   .hero-title {
     font-size: 38px;
@@ -144,10 +140,10 @@
   }
 }
 
-/* Mobil telefonlar uchun (768px dan kichik) */
+
 @media (max-width: 768px) {
   .hero-section {
-    padding: 60px 0 220px 0; /* Mobil versiyada statistika bloki kattalashgani uchun padding ko'paytirildi */
+    padding: 60px 0 220px 0; 
   }
 
   .hero-title {
@@ -158,10 +154,10 @@
     font-size: 14px;
   }
 
-  /* Oq blok ichidagi ma'lumotlar ustma-ust tushadi (column bo'ladi) */
+  
   .stats-badge-container {
     grid-template-columns: 1fr;
-    bottom: -180px; /* Blok uzun bo'lgani uchun joylashuvi moslandi */
+    bottom: -180px; 
     padding: 20px;
     gap: 20px;
   }
@@ -179,13 +175,13 @@
   }
 }
 
-/* Kichik telefonlar uchun (480px dan kichik) */
+
 @media (max-width: 480px) {
   .hero-title {
     font-size: 26px;
   }
   
   .hero-btn {
-    width: 100%; /* Tugma to'liq ekranni egallaydi */
+    width: 100%; 
   }
 }
