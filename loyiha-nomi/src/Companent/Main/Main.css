@@ -300,9 +300,7 @@
   color: #6f7787;
   line-height: 1.6;
 }
-
-/* SECTION 3 HOVER EFFEKTI */
-.course-card:hover {
+ .course-card:hover {
   transform: translateY(-12px); /* 12px silliq tepaga ko'tariladi */
   box-shadow: 0 22px 45px rgba(0, 102, 255, 0.09); /* To'qroq ko'k soya beradi */
   border-color: rgba(0, 102, 255, 0.1);
