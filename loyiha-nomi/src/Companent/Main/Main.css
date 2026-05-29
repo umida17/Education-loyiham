@@ -17,8 +17,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 50px;
-margin-top: 150px;
-
+  margin-top: 150px;
 }
 .about-content {
   flex: 1;
@@ -190,11 +189,11 @@ margin-top: 150px;
 }
 
 /* ==========================================
-   SECTION 3: COURSES (image_bc26c9.jpg stili)
+   SECTION 3: COURSES
 ========================================== */
 .courses-section {
   padding: 100px 0;
-  background-color: #ecf3fe; /* Rasm_bc26c9 dagi o'ziga xos och havorang fon */
+  background-color: #ecf3fe;
 }
 .courses-header {
   text-align: center;
@@ -213,15 +212,11 @@ margin-top: 150px;
   color: #656b7c;
   line-height: 1.6;
 }
-
-/* 3 talik grid chiroyli joylashuv */
 .courses-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
 }
-
-/* Karta Asosiy Stili */
 .course-card {
   background-color: #ffffff;
   border-radius: 10px;
@@ -230,7 +225,6 @@ margin-top: 150px;
   transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
   border: 1px solid transparent;
 }
-
 .course-img-wrapper {
   width: 100%;
   height: 240px;
@@ -242,8 +236,6 @@ margin-top: 150px;
   object-fit: cover;
   transition: transform 0.5s ease;
 }
-
-/* Kurs statistikasi qatori */
 .course-stats-bar {
   display: flex;
   align-items: center;
@@ -264,7 +256,7 @@ margin-top: 150px;
   color: #a0a7b5;
 }
 .stat-author {
-  margin-left: auto; /* Avatarni o'ng chekkaga suradi */
+  margin-left: auto;
 }
 .author-avatar-img {
   width: 30px;
@@ -274,8 +266,6 @@ margin-top: 150px;
   border: 1.5px solid #ffffff;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
-
-/* Sarlavha va Text qismi */
 .course-info-box {
   padding: 25px;
 }
@@ -295,26 +285,25 @@ margin-top: 150px;
 .course-price-tag {
   font-size: 20px;
   font-weight: 700;
-  color: #0066ff; /* Narx ko'k rangda */
+  color: #0066ff;
 }
 .course-card-text {
   font-size: 14px;
   color: #6f7787;
   line-height: 1.6;
 }
- .course-card:hover {
-  transform: translateY(-12px); /* 12px silliq tepaga ko'tariladi */
-  box-shadow: 0 22px 45px rgba(0, 102, 255, 0.09); /* To'qroq ko'k soya beradi */
+.course-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 22px 45px rgba(0, 102, 255, 0.09);
   border-color: rgba(0, 102, 255, 0.1);
 }
 .course-card:hover .course-card-img {
-  transform: scale(1.04); /* Rasm biroz yaqinlashadi */
+  transform: scale(1.04);
 }
 .course-card:hover .course-cat-title {
-  color: #0066ff; /* Kurs nomi ko'k rangga o'zgaradi */
+  color: #0066ff;
 }
-
- .courses-bottom-action {
+.courses-bottom-action {
   text-align: center;
   margin-top: 50px;
 }
@@ -336,12 +325,243 @@ margin-top: 150px;
   transform: translateY(-2px);
 }
 
+/* ==========================================
+   SECTION 4: MENTORS (YANGI QO'SHILDI)
+========================================== */
+.mentors-section {
+  padding: 90px 0;
+  background-color: #ffffff;
+}
+.mentors-header {
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto 55px auto;
+}
+.mentors-main-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  color: #0d1b2a;
+  margin-bottom: 15px;
+}
+.mentors-sub-desc {
+  font-size: 15px;
+  color: #68717c;
+  line-height: 1.6;
+}
+.mentors-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+.mentor-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  border: 1px solid #f0f3f8;
+}
+.mentor-img-box {
+  width: 100%;
+  height: 290px;
+  overflow: hidden;
+}
+.mentor-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+.mentor-info {
+  padding: 25px;
+}
+.mentor-name {
+  font-family: 'Poppins', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 6px;
+  transition: color 0.3s ease;
+}
+.mentor-role {
+  font-size: 14px;
+  color: #64748b;
+  margin-bottom: 20px;
+}
+.mentor-meta-bar {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  border-top: 1px solid #f1f5f9;
+  padding-top: 15px;
+  font-size: 13px;
+  color: #64748b;
+}
+.meta-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.meta-svg {
+  width: 15px;
+  height: 15px;
+  color: #94a3b8;
+}
+.meta-svg.star {
+  color: #0066ff;
+}
+.mentor-courses-count {
+  margin-left: auto;
+  font-weight: 500;
+  color: #475569;
+}
+.mentor-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 102, 255, 0.07);
+  border-color: rgba(0, 102, 255, 0.1);
+}
+.mentor-card:hover .mentor-img {
+  transform: scale(1.03);
+}
+.mentor-card:hover .mentor-name {
+  color: #0066ff;
+}
 
+/* ==========================================
+   SECTION 5: EVENTS (YANGI QO'SHILDI)
+========================================== */
+.events-section {
+  padding: 90px 0;
+  background-color: #ffffff;
+  border-top: 1px solid #f1f5f9;
+}
+.events-header {
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto 55px auto;
+}
+.events-main-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  color: #0d1b2a;
+  margin-bottom: 15px;
+}
+.events-sub-desc {
+  font-size: 15px;
+  color: #68717c;
+  line-height: 1.6;
+}
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+.event-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  border: 1px solid #f0f3f8;
+}
+.event-img-box {
+  width: 100%;
+  height: 220px;
+  position: relative;
+  overflow: hidden;
+}
+.event-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+.event-date-badge {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background-color: #0066ff;
+  color: #ffffff;
+  padding: 8px 14px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+  box-shadow: 0 4px 12px rgba(0, 102, 255, 0.3);
+  z-index: 2;
+  transition: background-color 0.3s ease;
+}
+.badge-day {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+.badge-month {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+.event-content-box {
+  padding: 25px;
+}
+.event-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 19px;
+  font-weight: 700;
+  color: #1e293b;
+  line-height: 1.4;
+  margin-bottom: 20px;
+  height: 54px;
+  overflow: hidden;
+  transition: color 0.3s ease;
+}
+.event-details-bar {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-top: 1px solid #f1f5f9;
+  padding-top: 15px;
+}
+.event-detail-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: #64748b;
+}
+.detail-svg {
+  width: 15px;
+  height: 15px;
+  color: #94a3b8;
+}
+.event-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 22px 45px rgba(0, 102, 255, 0.08);
+  border-color: rgba(0, 102, 255, 0.1);
+}
+.event-card:hover .event-img {
+  transform: scale(1.04);
+}
+.event-card:hover .event-title {
+  color: #0066ff;
+}
+.event-card:hover .event-date-badge {
+  background-color: #0052cc;
+}
+
+/* ==========================================
+   MEDIA QUERIES (RESPONSIVELIK)
+========================================== */
 @media (max-width: 1024px) {
   .about-title { font-size: 34px; }
   .about-container { gap: 30px; }
   .works-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
   .courses-grid { grid-template-columns: repeat(2, 1fr); gap: 25px; }
+  .mentors-grid { grid-template-columns: repeat(2, 1fr); gap: 25px; }
+  .events-grid { grid-template-columns: repeat(2, 1fr); gap: 25px; }
   .courses-main-title { font-size: 34px; }
 }
 
@@ -352,15 +572,14 @@ margin-top: 150px;
   .about-image-wrapper { width: 100%; max-width: 100%; }
   .about-btn { width: 100%; max-width: 300px; }
   
-  .works-section { padding: 60px 0; }
-  .works-main-title { font-size: 28px; }
-
-  .courses-section { padding: 60px 0; }
-  .courses-main-title { font-size: 28px; }
+  .works-section, .courses-section, .mentors-section, .events-section { padding: 60px 0; }
+  .works-main-title, .courses-main-title { font-size: 28px; }
 }
 
 @media (max-width: 580px) {
   .works-grid { grid-template-columns: 1fr; gap: 20px; }
   .courses-grid { grid-template-columns: 1fr; gap: 20px; }
+  .mentors-grid { grid-template-columns: 1fr; gap: 20px; }
+  .events-grid { grid-template-columns: 1fr; gap: 20px; }
   .course-img-wrapper { height: 200px; }
 }
