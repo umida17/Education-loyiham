@@ -12,11 +12,11 @@ import courseImg6 from '../../assets/fred.png';
 import avatarImg from '../../assets/Ellipse 22.png'; 
 
 // YANGI BLOKLAR UCHUN RASMLAR (image_bad477.jpg loyihasidan)
-import mentorImg1 from '../../assets/mentor1.jpg';
-import mentorImg2 from '../../assets/mentor2.jpg';
-import mentorImg3 from '../../assets/mentor3.jpg';
-import eventImg1 from '../../assets/event1.jpg';
-import eventImg2 from '../../assets/event2.jpg';
+import mentorImg1 from '../../assets/uns.png.';
+import mentorImg2 from '../../assets/reang.png';
+import mentorImg3 from '../../assets/school.png';
+import eventImg1 from '../../assets/Frame 106.png';
+import eventImg2 from '../../assets/Frame 109.png';
 import eventImg3 from '../../assets/event3.jpg';
 
 const mainTranslations = {
