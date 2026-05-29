@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import Header from './components/Header/Header';
-import Hero from './components/Hero/Hero';
+import Header from './Companent/Header/Header';
+import Hero from './Companent/Hero/Hero';
 import Main  from './Companent/Main/Main'; 
 
 function App() {

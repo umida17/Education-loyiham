@@ -2,6 +2,8 @@
 .about-section {
   padding: 80px 0;
   background-color: #ffffff;
+  margin-top: 150px;
+  margin-bottom: 140px;
 }
 
 .about-container {
@@ -213,5 +215,140 @@
   }
   .about-text {
     font-size: 14px;
+  }
+}
+
+
+
+/* Bo'limning umumiy stili */
+.works-section {
+  padding: 100px 0;
+  background-color: #ffffff;
+}
+
+/* Sarlavhalarni markazga tekislash */
+.works-header {
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto 60px auto;
+}
+
+.works-main-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 38px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 15px;
+}
+
+.works-sub-desc {
+  font-size: 15px;
+  color: #666666;
+  line-height: 1.6;
+}
+
+/* To'rtta elementni yonma-yon chiroyli taxlash (Grid) */
+.works-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+/* Har bir individual karta stili */
+.works-card {
+  text-align: center;
+  padding: 35px 25px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  border: 1px solid transparent; /* Hoverda silliq chegara chiqishi uchun */
+}
+
+/* IKONKA QUTISI */
+.works-icon-box {
+  width: 75px;
+  height: 75px;
+  color: #0066ff; /* Skrinshotingizdagi ko'k rang */
+  margin: 0 auto 25px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.works-icon-box stroke {
+  transition: stroke 0.3s ease;
+}
+
+.works-card-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 12px;
+}
+
+.works-card-desc {
+  font-size: 14px;
+  color: #666666;
+  line-height: 1.6;
+}
+
+/* ==========================================
+   TRANSFORM VA HOVER EFFEKTLARI (AKTIV HOLAT)
+========================================== */
+.works-card:hover {
+  transform: translateY(-10px); /* Karta silliqgina 10px tepaga ko'tariladi */
+  box-shadow: 0 15px 35px rgba(0, 102, 255, 0.08); /* Mayin ko'k soya beradi */
+  border-color: rgba(0, 102, 255, 0.1);
+  background-color: #fafbfe; /* Fon sal och ko'k rangga o'tadi */
+}
+
+/* Hover bo'lganda ikonkaning bir oz kattalashishi */
+.works-card:hover .works-icon-box {
+  transform: scale(1.1);
+  color: #0052cc; /* Ikonka rangi biroz to'qlashadi */
+}
+
+
+/* ==========================================
+   MUKAMMAL RESPONSIVE QISMI (MEDIA QUERIES)
+========================================== */
+
+/* Kichik monitor va planshetlar uchun (1024px gacha) */
+@media (max-width: 1024px) {
+  .works-grid {
+    grid-template-columns: repeat(2, 1fr); /* 4 tadan 2 tadan qatorga o'tadi */
+    gap: 25px;
+  }
+  .works-main-title {
+    font-size: 32px;
+  }
+}
+
+/* Telefonlar uchun (768px gacha) */
+@media (max-width: 768px) {
+  .works-section {
+    padding: 60px 0;
+  }
+  
+  .works-header {
+    margin-bottom: 40px;
+  }
+
+  .works-main-title {
+    font-size: 28px;
+  }
+}
+
+/* Kichik telefonlar uchun (520px gacha) */
+@media (max-width: 520px) {
+  .works-grid {
+    grid-template-columns: 1fr; /* Hamma kartalar to'liq bittadan column bo'lib tushadi */
+    gap: 20px;
+  }
+  
+  .works-card {
+    padding: 25px 20px; /* Telefon ekranida ichki masofalar ixchamlashadi */
   }
 }
