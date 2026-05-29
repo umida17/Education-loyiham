@@ -8,7 +8,7 @@
   padding: 15px 0;
 }
 
- .header-container  {
+ .header-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -17,19 +17,21 @@
   padding: 0 20px;
 }
 
- .education{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
- }
+.education {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 
- .nav-menu {
+.nav-menu {
   display: flex;
   align-items: center;
   gap: 25px;
 }
 
- .nav-select, .nav-link, .signin-link {
+ .nav-select, 
+.nav-menu a, 
+.header-actions a:not(.signup-btn a) {
   font-family: 'Poppins', sans-serif;
   font-size: 16px;
   font-weight: 500;
@@ -42,17 +44,22 @@
   padding: 5px 0;
   transition: color 0.3s ease;
   position: relative;
+  display: inline-block;
 }
 
- .nav-select:hover, .nav-link:hover, .signin-link:hover {
+ .nav-select:hover, 
+.nav-menu a:hover, 
+.header-actions a:not(.signup-btn a):hover {
   color: #4f46e5;  
 }
 
- .nav-link::after, .signin-link::after {
+  .nav-select::after, 
+.nav-menu a::after, 
+.header-actions a:not(.signup-btn a)::after {
   content: '';
   position: absolute;
   width: 100%;
-  transform: scaleX(0);
+  transform: scaleX(0);  
   height: 2px;
   bottom: 0;
   left: 0;
@@ -61,7 +68,9 @@
   transition: transform 0.25s ease-out;
 }
 
-.nav-link:hover::after, .signin-link:hover::after {
+ .nav-select:hover::after, 
+.nav-menu a:hover::after, 
+.header-actions a:not(.signup-btn a):hover::after {
   transform: scaleX(1);
   transform-origin: bottom left;
 }
@@ -100,13 +109,18 @@
 }
 
 .signup-btn a {
-  color: #ffffff;
+  color: #ffffff !important;  
   text-decoration: none;
   font-size: 15px;
   font-weight: 600;
+  padding: 0 !important;
 }
 
- .signup-btn:hover {
+.signup-btn a::after {
+  display: none !important;  
+}
+
+.signup-btn:hover {
   background-color: #4338ca;
   transform: translateY(-2px);
   box-shadow: 0 6px 15px rgba(79, 70, 229, 0.3);
