@@ -1,15 +1,17 @@
-import React from 'react'
-import Header from './Companent/Header/Header'
-import Hero from './Companent/Hero/Hero'
+import React, { useState } from 'react';
+import Header from './Companent/Header/Header';
+import Hero from './Companent/Hero/Hero';
 
-const App = () => {
+function App() {
+   const [lang, setLang] = useState('uz');
+
   return (
     <div>
-      <Header/>
-      <Hero/>
+       <Header lang={lang} setLang={setLang} />
+      
+       <Hero lang={lang} />
     </div>
-  )
+  );
 }
 
-export default App
-
+export default App;

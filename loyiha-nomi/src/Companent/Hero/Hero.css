@@ -1,12 +1,10 @@
-/* Asosiy umumiy container (agar global CSS-da bo'lmasa) */
-.container {
+ .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
 }
 
-/* Hero qismi background sozlamalari */
-.hero-section {
+ .hero-section {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -14,7 +12,8 @@
   display: flex;
   align-items: center;
   position: relative;
-  padding: 80px 0 140px 0; /* Pastdagi oq blok sig'ishi uchun pastki padding katta qilingan */
+  padding: 80px 0 140px 0;
+  height: 800px;
 }
 
 .hero-container {
@@ -25,8 +24,7 @@
   text-align: center;
 }
 
-/* Matnlar bloki */
-.hero-content {
+ .hero-content {
   max-width: 800px;
   color: #ffffff;
   margin-bottom: 50px;
@@ -48,8 +46,7 @@
   font-weight: 400;
 }
 
-/* Ko'k tugma stili va hover effekti */
-.hero-btn {
+ .hero-btn {
   background-color: #0066ff;
   color: #ffffff;
   border: none;
@@ -67,10 +64,9 @@
   box-shadow: 0 5px 15px rgba(0, 102, 255, 0.4);
 }
 
-/* Pastdagi Oq Statistika Paneli */
-.stats-badge-container {
+ .stats-badge-container {
   position: absolute;
-  bottom: -60px; /* Yarmi pastga chiqib turishi uchun */
+  bottom: -60px; 
   left: 50%;
   transform: translateX(-50%);
   width: calc(100% - 40px);
@@ -85,8 +81,7 @@
   z-index: 5;
 }
 
-/* Har bir statistika elementi */
-.stat-card {
+ .stat-card {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -96,7 +91,7 @@
 .stat-icon {
   width: 50px;
   height: 50px;
-  color: #0066ff; /* Ikonkalar ko'k rangda */
+  color: #0066ff;  
   display: flex;
   align-items: center;
   justify-content: center;
