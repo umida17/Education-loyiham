@@ -3,15 +3,15 @@ import './Main.css';
 
 // Rasmlar (Yo'llarini loyihangizga qarab moslab olasiz)
 import aboutImg from '../../assets/mons.png'; 
-import courseImg1 from '../../assets/course1.jpg'; // O'zingizdagi ixtiyoriy rasmlar
-import courseImg2 from '../../assets/course2.jpg';
-import courseImg3 from '../../assets/course3.jpg';
-import courseImg4 from '../../assets/course4.jpg';
-import courseImg5 from '../../assets/course5.jpg';
-import courseImg6 from '../../assets/course6.jpg';
+import courseImg1 from '../../assets/win.png'; // O'zingizdagi ixtiyoriy rasmlar
+import courseImg2 from '../../assets/dars.png';
+import courseImg3 from '../../assets/blue.pmg';
+import courseImg4 from '../../assets/mr.png';
+import courseImg5 from '../../assets/win.png';
+import courseImg6 from '../../assets/fred.png';
 
-// Avtorlar uchun ixtiyoriy rasmlar (Dumaloq avatar)
-import avatarImg from '../../assets/avatar.png'; 
+
+import avatarImg from '../../assets/Ellipse 22.png'; 
 
 const mainTranslations = {
   uz: {
