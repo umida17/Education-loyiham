@@ -1,4 +1,4 @@
-
+/* Katta ekranlar uchun asosiy stillar */
 .header-section {
   width: 100%;
   background-color: #ffffff;
@@ -18,21 +18,13 @@
   padding: 0 20px;
 }
 
-.education {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
 .nav-menu {
   display: flex;
   align-items: center;
   gap: 25px;
 }
 
-.nav-select, 
-.nav-menu a, 
-.header-actions a:not(.signup-btn a) {
+.nav-select, .nav-menu a, .header-actions a:not(.signup-btn a) {
   font-family: 'Poppins', sans-serif;
   font-size: 16px;
   font-weight: 500;
@@ -43,21 +35,11 @@
   outline: none;
   cursor: pointer;
   padding: 5px 0;
-  transition: color 0.3s ease;
   position: relative;
-  display: inline-block;
 }
 
-.nav-select:hover, 
-.nav-menu a:hover, 
-.header-actions a:not(.signup-btn a):hover {
-  color: #4f46e5;  
-}
-
-
-.nav-select::after, 
-.nav-menu a::after, 
-.header-actions a:not(.signup-btn a)::after {
+/* Hover chiziq animatsiyasi */
+.nav-menu a::after, .header-actions a:not(.signup-btn a)::after {
   content: '';
   position: absolute;
   width: 100%;
@@ -66,17 +48,12 @@
   bottom: 0;
   left: 0;
   background-color: #4f46e5;
-  transform-origin: bottom right;
   transition: transform 0.25s ease-out;
 }
 
-.nav-select:hover::after, 
-.nav-menu a:hover::after, 
-.header-actions a:not(.signup-btn a):hover::after {
+.nav-menu a:hover::after, .header-actions a:not(.signup-btn a):hover::after {
   transform: scaleX(1);
-  transform-origin: bottom left;
 }
-
 
 .header-actions {
   display: flex;
@@ -88,97 +65,96 @@
   padding: 6px 10px;
   border: 1px solid #e5e7eb;
   border-radius: 8px;
-  font-size: 14px;
   font-weight: 600;
-  background-color: #f9fafb;
   cursor: pointer;
-  outline: none;
-  transition: all 0.3s ease;
 }
 
-.lang-select:hover {
-  border-color: #4f46e5;
-  background-color: #f3f4f6;
-}
-
-/* Sign Up Tugmasi */
 .signup-btn {
   background-color: #4f46e5;
   border: none;
   border-radius: 8px;
   padding: 10px 22px;
   cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 10px rgba(79, 70, 229, 0.2);
 }
 
 .signup-btn a {
   color: #ffffff !important;
   text-decoration: none;
-  font-size: 15px;
   font-weight: 600;
-  padding: 0 !important;
 }
 
-.signup-btn a::after {
-  display: none !important; 
+/* Katta ekranda burger tugmasi ko'rinmaydi */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  width: 25px;
+  z-index: 1001;
 }
 
-.signup-btn:hover {
-  background-color: #4338ca;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 15px rgba(79, 70, 229, 0.3);
+.hamburger span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: #333;
+  border-radius: 2px;
+  transition: all 0.3s ease;
 }
 
-.signup-btn:active {
-  transform: translateY(0);
-}
-
-
-
-@media (max-width: 1024px) {
-  .nav-menu {
-    gap: 15px;
-  }
-  .nav-select, .nav-menu a {
-    font-size: 15px;
-  }
-}
 
 @media (max-width: 768px) {
-  .header-container {
-    flex-direction: column; 
-    gap: 15px;
-    padding: 10px;
+  .hamburger {
+    display: flex;
   }
 
+   .hamburger.open span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger.open span:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.open span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  
   .nav-menu {
-    flex-wrap: wrap; 
-    justify-content: center;
-    gap: 20px;
-  }
-}
-
-@media (max-width: 480px) {
-  .header-section {
-    padding: 10px 0;
-  }
-
-  .nav-menu {
-    gap: 12px; 
-  }
-
-  .nav-select, .nav-menu a, .header-actions a {
-    font-size: 14px; 
-  }
-
-  .header-actions {
+    position: absolute;
+    top: 70px; 
+    left: 0;
     width: 100%;
-    justify-content: center; 
-    gap: 15px;
+    background-color: #ffffff;
+    flex-direction: column; 
+    gap: 20px;
+    padding: 30px 0;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05);
+    border-top: 1px solid #f3f4f6;
+    
+
+    opacity: 0;
+    transform: translateY(-20px);
+    pointer-events: none;
+    transition: all 0.4s ease;
+  }
+
+   .nav-menu.active {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  .nav-select, .nav-menu a {
+    width: 100%;
+    text-align: center;
+    font-size: 18px; 
+  }
+  
+  .header-actions {
+    gap: 12px;
   }
 
   .signup-btn {
-    padding: 8px 16px; 
+    padding: 8px 14px;
   }
 }
