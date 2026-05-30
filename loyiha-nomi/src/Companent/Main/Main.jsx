@@ -20,7 +20,7 @@ import eventImg2 from '../../assets/Frame 109.png';
 import eventImg3 from '../../assets/Frame 111.png';
 
 // BLOG RASMLARI (Ixtiyoriy rasmlarni o'z assetlaringizga almashtirishingiz mumkin)
-import blogImg1 from '../../assets/win.png'; // yoki boshqa rasm nomlari
+import blogImg1 from '../../assets/frontend.png';
 import blogImg2 from '../../assets/dars.png';
 import blogImg3 from '../../assets/blue.png';
 
