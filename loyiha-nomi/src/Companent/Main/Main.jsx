@@ -19,10 +19,15 @@ import eventImg1 from '../../assets/Frame 106.png';
 import eventImg2 from '../../assets/Frame 109.png';
 import eventImg3 from '../../assets/Frame 111.png';
 
-// BLOG RASMLARI (Ixtiyoriy rasmlarni o'z assetlaringizga almashtirishingiz mumkin)
+// BLOG RASMLARI
 import blogImg1 from '../../assets/frontend.png';
 import blogImg2 from '../../assets/psixolik.png';
 import blogImg3 from '../../assets/jamoa.png';
+
+// TESTIMONIALS (YANGI RASMLAR - O'ZINGIZNI ASSETLARINGIZGA ALMASHTIRISHINGIZ MUMKIN)
+import studentImg1 from '../../assets/Ellipse 22.png'; // Jony Ahmed uchun ixtiyoriy rasm
+import studentImg2 from '../../assets/reang.png';     // Mukter Hossain uchun ixtiyoriy rasm
+import studentImg3 from '../../assets/uns.png';       // Jony Sing uchun ixtiyoriy rasm
 
 const mainTranslations = {
   uz: {
@@ -31,6 +36,13 @@ const mainTranslations = {
     desc2: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam et hendrerit euismod fusce sit.",
     btnText: "Batafsil ma'lumot",
     
+    stats: {
+      teachers: "O'qituvchilar",
+      students: "Talabalar",
+      courses: "Kurslar",
+      countries: "Davlatlar"
+    },
+
     sectionTitle: "Biz Qanday Ishlaymiz",
     sectionDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam et hendrerit euismod fusce sit.",
     cards: [
@@ -75,7 +87,16 @@ const mainTranslations = {
       { id: 1, img: blogImg1, title: "Product Marketing Creative Camping Brand Image", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet, vestibulum euismod nullam at entum." },
       { id: 2, img: blogImg2, title: "Product Marketing Creative Camping Brand Image", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet, vestibulum euismod nullam at entum." },
       { id: 3, img: blogImg3, title: "Product Marketing Creative Camping Brand Image", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet, vestibulum euismod nullam at entum." }
-    ]
+    ],
+
+    // image_5b6ddc.png asosidagi Testimonials tarjimalari
+    testimonialsTitle: "Talabalarimiz Biz Haqimizda",
+    testimonialsDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Placerat mauris non dictumst in leo. Lorem ipsum dolor sit amet.",
+    studentRole: "UI/UX Talabasi",
+    
+    // Newsletter qismi tarjimalari
+    newsletterPlaceholder: "Emailingizni kiriting...",
+    newsletterBtn: "Obuna bo'lish"
   },
   ru: {
     title: "Найдите курс, который сделает ваше будущее ярким",
@@ -83,6 +104,13 @@ const mainTranslations = {
     desc2: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam et hendrerit euismod fusce sit.",
     btnText: "Подробнее",
     
+    stats: {
+      teachers: "Учителя",
+      students: "Студенты",
+      courses: "Курсы",
+      countries: "Страны"
+    },
+
     sectionTitle: "Как это работает",
     sectionDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam et hendrerit euismod fusce sit.",
     cards: [
@@ -127,7 +155,16 @@ const mainTranslations = {
       { id: 1, img: blogImg1, title: "Product Marketing Creative Camping Brand Image", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet, vestibulum euismod nullam at entum." },
       { id: 2, img: blogImg2, title: "Product Marketing Creative Camping Brand Image", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet, vestibulum euismod nullam at entum." },
       { id: 3, img: blogImg3, title: "Product Marketing Creative Camping Brand Image", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet, vestibulum euismod nullam at entum." }
-    ]
+    ],
+
+    // Testimonials RU
+    testimonialsTitle: "Что Говорят Наши Студенты",
+    testimonialsDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Placerat mauris non dictumst in leo. Lorem ipsum dolor sit amet.",
+    studentRole: "Студент UI/UX",
+
+    // Newsletter RU
+    newsletterPlaceholder: "Введите ваш email...",
+    newsletterBtn: "Подписаться"
   },
   en: {
     title: "Find Your Course That Makes Bright Future",
@@ -135,6 +172,13 @@ const mainTranslations = {
     desc2: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam et hendrerit euismod fusce sit.",
     btnText: "Learn More",
     
+    stats: {
+      teachers: "Teachers",
+      students: "Students",
+      courses: "Courses",
+      countries: "Countries"
+    },
+
     sectionTitle: "How It Work",
     sectionDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam et hendrerit euismod fusce sit.",
     cards: [
@@ -179,7 +223,16 @@ const mainTranslations = {
       { id: 1, img: blogImg1, title: "Product Marketing Creative Camping Brand Image", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet, vestibulum euismod nullam at entum." },
       { id: 2, img: blogImg2, title: "Product Marketing Creative Camping Brand Image", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet, vestibulum euismod nullam at entum." },
       { id: 3, img: blogImg3, title: "Product Marketing Creative Camping Brand Image", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet, vestibulum euismod nullam at entum." }
-    ]
+    ],
+
+    // Testimonials EN
+    testimonialsTitle: "What Our Students Say",
+    testimonialsDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Placerat mauris non dictumst in leo. Lorem ipsum dolor sit amet.",
+    studentRole: "UI/UX Student",
+
+    // Newsletter EN
+    newsletterPlaceholder: "Enter your email...",
+    newsletterBtn: "Subscribe"
   }
 };
 
@@ -192,6 +245,12 @@ const section2Icons = [
 
 const Main = ({ lang }) => {
   const t = mainTranslations[lang || 'uz'];  
+
+  const studentReviews = [
+    { id: 1, img: studentImg1, name: "Jony Ahmed", review: "Lorem ipsum dolor sit amet, consec tetur adipiscing elit. Placerat mauris non dictumst in leo etiam. Proin iaculis arcu iaculis egestas." },
+    { id: 2, img: studentImg2, name: "Mukter Hossain", review: "Lorem ipsum dolor sit amet, consec tetur adipiscing elit. Placerat mauris non dictumst in leo etiam. Proin iaculis arcu iaculis egestas." },
+    { id: 3, img: studentImg3, name: "Jony Sing", review: "Lorem ipsum dolor sit amet, consec tetur adipiscing elit. Placerat mauris non dictumst in leo etiam. Proin iaculis arcu iaculis egestas." }
+  ];
 
   return (
     <>
@@ -215,25 +274,25 @@ const Main = ({ lang }) => {
         </div>
       </section>
 
-      {/* ================= NEW SECTION: STATS (STATISTIKA) ================= */}
+      {/* ================= SECTION: STATS (STATISTIKA) ================= */}
       <section className="stats-section">
         <div className="container stats-container">
           <div className="stats-grid">
             <div className="stat-counter-item">
               <h2>85+</h2>
-              <p>Teachers</p>
+              <p>{t.stats.teachers}</p>
             </div>
             <div className="stat-counter-item">
               <h2>850+</h2>
-              <p>Students</p>
+              <p>{t.stats.students}</p>
             </div>
             <div className="stat-counter-item">
               <h2>55+</h2>
-              <p>Courses</p>
+              <p>{t.stats.courses}</p>
             </div>
             <div className="stat-counter-item">
               <h2>25+</h2>
-              <p>Country</p>
+              <p>{t.stats.countries}</p>
             </div>
           </div>
         </div>
@@ -380,7 +439,7 @@ const Main = ({ lang }) => {
         </div>
       </section>
 
-      {/* ================= NEW SECTION: LATEST BLOG ================= */}
+      {/* ================= SECTION 6: LATEST BLOG ================= */}
       <section className="blog-section">
         <div className="container">
           <div className="blog-section-header">
@@ -401,6 +460,68 @@ const Main = ({ lang }) => {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ================= NEW SECTION 7: TESTIMONIALS (STUDENTS SAY) ================= */}
+      <section className="testimonials-section">
+        <div className="container">
+          <div className="testimonials-header">
+            <h2 className="testimonials-main-title">{t.testimonialsTitle}</h2>
+            <p className="testimonials-sub-desc">{t.testimonialsDesc}</p>
+          </div>
+
+          <div className="testimonials-slider-wrapper">
+            {/* Chap tomondagi arrow tugmasi */}
+            <button className="slider-arrow-btn prev-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <polyline points="15 18 9 12 15 6" />
+              </svg>
+            </button>
+
+            <div className="testimonials-grid">
+              {studentReviews.map((item) => (
+                <div className="testimonial-card" key={item.id}>
+                  <p className="testimonial-text">{item.review}</p>
+                  <div className="testimonial-user-box">
+                    <img src={item.img} alt={item.name} className="testimonial-avatar" />
+                    <div className="testimonial-user-info">
+                      <h4>{item.name}</h4>
+                      <p>{t.studentRole}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* O'ng tomondagi arrow tugmasi */}
+            <button className="slider-arrow-btn next-btn active">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <polyline points="9 18 15 12 9 6" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* ================= NEW SECTION 8: NEWSLETTER ================= */}
+      <section className="newsletter-section">
+        <div className="container">
+          <div className="newsletter-blue-box">
+            <h2 className="newsletter-title">{t.testimonialsTitle}</h2>
+            <p className="newsletter-desc">{t.testimonialsDesc}</p>
+            <form className="newsletter-form" onSubmit={(e) => e.preventDefault()}>
+              <input 
+                type="email" 
+                placeholder={t.newsletterPlaceholder} 
+                className="newsletter-input" 
+                required 
+              />
+              <button type="submit" className="newsletter-submit-btn">
+                {t.newsletterBtn}
+              </button>
+            </form>
           </div>
         </div>
       </section>
