@@ -17,7 +17,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 50px;
-  margin-top: 150px;
+  margin-top: 50px; /* 150px juda katta bo'lgani uchun 50px ga moslandi */
 }
 .about-content {
   flex: 1;
@@ -120,6 +120,33 @@
 }
 .video-play-btn:hover .play-icon {
   color: #ffffff;
+}
+
+/* ==========================================
+   NEW SECTION: STATS (STATISTIKA)
+========================================== */
+.stats-section {
+  background-color: #ecf3fe; /* Och ko'k fon */
+  padding: 50px 0;
+  margin-bottom: 30px;
+}
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  text-align: center;
+}
+.stat-counter-item h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 46px;
+  font-weight: 700;
+  color: #0b132a;
+  margin: 0 0 5px 0;
+}
+.stat-counter-item p {
+  font-size: 15px;
+  color: #656b7c;
+  margin: 0;
+  font-weight: 500;
 }
 
 /* ==========================================
@@ -326,7 +353,7 @@
 }
 
 /* ==========================================
-   SECTION 4: MENTORS (YANGI QO'SHILDI)
+   SECTION 4: MENTORS
 ========================================== */
 .mentors-section {
   padding: 90px 0;
@@ -429,7 +456,7 @@
 }
 
 /* ==========================================
-   SECTION 5: EVENTS (YANGI QO'SHILDI)
+   SECTION 5: EVENTS
 ========================================== */
 .events-section {
   padding: 90px 0;
@@ -488,21 +515,16 @@
   border-radius: 4px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  text-align: center;
   font-family: 'Poppins', sans-serif;
-  box-shadow: 0 4px 12px rgba(0, 102, 255, 0.3);
-  z-index: 2;
-  transition: background-color 0.3s ease;
 }
 .badge-day {
   font-size: 18px;
   font-weight: 700;
-  line-height: 1.1;
 }
 .badge-month {
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 0.5px;
+  font-size: 12px;
+  font-weight: 500;
 }
 .event-content-box {
   padding: 25px;
@@ -513,73 +535,139 @@
   font-weight: 700;
   color: #1e293b;
   line-height: 1.4;
-  margin-bottom: 20px;
-  height: 54px;
-  overflow: hidden;
-  transition: color 0.3s ease;
+  margin-bottom: 15px;
 }
 .event-details-bar {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  border-top: 1px solid #f1f5f9;
-  padding-top: 15px;
 }
 .event-detail-item {
   display: flex;
   align-items: center;
   gap: 8px;
-  font-size: 13px;
+  font-size: 14px;
   color: #64748b;
 }
 .detail-svg {
-  width: 15px;
-  height: 15px;
+  width: 16px;
+  height: 16px;
   color: #94a3b8;
 }
 .event-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 22px 45px rgba(0, 102, 255, 0.08);
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 102, 255, 0.07);
   border-color: rgba(0, 102, 255, 0.1);
 }
 .event-card:hover .event-img {
-  transform: scale(1.04);
-}
-.event-card:hover .event-title {
-  color: #0066ff;
-}
-.event-card:hover .event-date-badge {
-  background-color: #0052cc;
+  transform: scale(1.03);
 }
 
 /* ==========================================
-   MEDIA QUERIES (RESPONSIVELIK)
+   NEW SECTION: LATEST BLOG
 ========================================== */
-@media (max-width: 1024px) {
-  .about-title { font-size: 34px; }
-  .about-container { gap: 30px; }
-  .works-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
-  .courses-grid { grid-template-columns: repeat(2, 1fr); gap: 25px; }
-  .mentors-grid { grid-template-columns: repeat(2, 1fr); gap: 25px; }
-  .events-grid { grid-template-columns: repeat(2, 1fr); gap: 25px; }
-  .courses-main-title { font-size: 34px; }
+.blog-section {
+  padding: 90px 0;
+  background-color: #ffffff;
+  border-top: 1px solid #f1f5f9;
+}
+.blog-section-header {
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto 55px auto;
+}
+.blog-main-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  color: #0d1b2a;
+  margin-bottom: 15px;
+}
+.blog-sub-desc {
+  font-size: 15px;
+  color: #68717c;
+  line-height: 1.6;
+}
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+.blog-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  border: 1px solid #f0f3f8;
+}
+.blog-img-wrapper {
+  width: 100%;
+  height: 230px;
+  overflow: hidden;
+}
+.blog-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+.blog-card-body {
+  padding: 25px;
+}
+.blog-card-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #1e293b;
+  line-height: 1.4;
+  margin-bottom: 12px;
+}
+.blog-card-desc {
+  font-size: 14px;
+  color: #64748b;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+.blog-readmore-btn {
+  color: #0066ff;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+.blog-readmore-btn:hover {
+  color: #0052cc;
+  text-decoration: underline;
+}
+.blog-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 102, 255, 0.07);
+  border-color: rgba(0, 102, 255, 0.1);
+}
+.blog-card:hover .blog-card-img {
+  transform: scale(1.03);
 }
 
-@media (max-width: 768px) {
-  .about-container { flex-direction: column; text-align: center; gap: 40px; }
-  .about-content { max-width: 100%; }
-  .about-title { font-size: 28px; }
-  .about-image-wrapper { width: 100%; max-width: 100%; }
-  .about-btn { width: 100%; max-width: 300px; }
-  
-  .works-section, .courses-section, .mentors-section, .events-section { padding: 60px 0; }
-  .works-main-title, .courses-main-title { font-size: 28px; }
+/* Responsive moslashuvchanlik */
+@media (max-width: 992px) {
+  .courses-grid, .mentors-grid, .events-grid, .blog-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .about-content {
+    max-width: 100%;
+  }
 }
-
-@media (max-width: 580px) {
-  .works-grid { grid-template-columns: 1fr; gap: 20px; }
-  .courses-grid { grid-template-columns: 1fr; gap: 20px; }
-  .mentors-grid { grid-template-columns: 1fr; gap: 20px; }
-  .events-grid { grid-template-columns: 1fr; gap: 20px; }
-  .course-img-wrapper { height: 200px; }
+@media (max-width: 600px) {
+  .courses-grid, .mentors-grid, .events-grid, .blog-grid, .stats-grid, .works-grid {
+    grid-template-columns: 1fr;
+  }
 }

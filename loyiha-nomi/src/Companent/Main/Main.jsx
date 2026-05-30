@@ -1,7 +1,7 @@
 import React from 'react';
 import './Main.css';
 
-// O'ZINGIZNING ESKI RASMLARINGIZ
+// ESKI RASMLARINIGIZ
 import aboutImg from '../../assets/mons.png'; 
 import courseImg1 from '../../assets/win.png'; 
 import courseImg2 from '../../assets/dars.png';
@@ -11,13 +11,18 @@ import courseImg5 from '../../assets/win.png';
 import courseImg6 from '../../assets/fred.png';
 import avatarImg from '../../assets/Ellipse 22.png'; 
 
-// YANGI BLOKLAR UCHUN RASMLAR (Tuzatildi: uns.png ketidagi ortiqcha nuqta olib tashlandi)
+// MENTORLAR VA TADBIR RASMLARI
 import mentorImg1 from '../../assets/uns.png';
 import mentorImg2 from '../../assets/reang.png';
 import mentorImg3 from '../../assets/school.png';
 import eventImg1 from '../../assets/Frame 106.png';
 import eventImg2 from '../../assets/Frame 109.png';
 import eventImg3 from '../../assets/Frame 111.png';
+
+// BLOG RASMLARI (Ixtiyoriy rasmlarni o'z assetlaringizga almashtirishingiz mumkin)
+import blogImg1 from '../../assets/win.png'; // yoki boshqa rasm nomlari
+import blogImg2 from '../../assets/dars.png';
+import blogImg3 from '../../assets/blue.png';
 
 const mainTranslations = {
   uz: {
@@ -61,6 +66,15 @@ const mainTranslations = {
       { id: 1, img: eventImg1, day: "10", month: "APR", title: "TED Talks at UCF College of Education", time: "4.00 pm - 8.00 pm", loc: "Dhaka Bangladesh" },
       { id: 2, img: eventImg2, day: "10", month: "APR", title: "Summer Course Starts From June", time: "4.00 pm - 8.00 pm", loc: "Dhaka Bangladesh" },
       { id: 3, img: eventImg3, day: "10", month: "APR", title: "Importance of Research Seminar", time: "4.00 pm - 8.00 pm", loc: "Dhaka Bangladesh" }
+    ],
+
+    blogTitle: "Bizning Oxirgi Bloglarimiz",
+    blogDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet, vestibulum euismod nullam at entum.",
+    readMore: "Batafsil...",
+    blogList: [
+      { id: 1, img: blogImg1, title: "Product Marketing Creative Camping Brand Image", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet, vestibulum euismod nullam at entum." },
+      { id: 2, img: blogImg2, title: "Product Marketing Creative Camping Brand Image", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet, vestibulum euismod nullam at entum." },
+      { id: 3, img: blogImg3, title: "Product Marketing Creative Camping Brand Image", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet, vestibulum euismod nullam at entum." }
     ]
   },
   ru: {
@@ -104,6 +118,15 @@ const mainTranslations = {
       { id: 1, img: eventImg1, day: "10", month: "АПР", title: "TED Talks at UCF College of Education", time: "4.00 pm - 8.00 pm", loc: "Дакка Бангладеш" },
       { id: 2, img: eventImg2, day: "10", month: "АПР", title: "Summer Course Starts From June", time: "4.00 pm - 8.00 pm", loc: "Дакка Бангладеш" },
       { id: 3, img: eventImg3, day: "10", month: "АПР", title: "Importance of Research Seminar", time: "4.00 pm - 8.00 pm", loc: "Дакка Бангладеш" }
+    ],
+
+    blogTitle: "Наши Последние Блоги",
+    blogDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet, vestibulum euismod nullam at entum.",
+    readMore: "Подробнее...",
+    blogList: [
+      { id: 1, img: blogImg1, title: "Product Marketing Creative Camping Brand Image", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet, vestibulum euismod nullam at entum." },
+      { id: 2, img: blogImg2, title: "Product Marketing Creative Camping Brand Image", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet, vestibulum euismod nullam at entum." },
+      { id: 3, img: blogImg3, title: "Product Marketing Creative Camping Brand Image", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet, vestibulum euismod nullam at entum." }
     ]
   },
   en: {
@@ -147,6 +170,15 @@ const mainTranslations = {
       { id: 1, img: eventImg1, day: "10", month: "APR", title: "TED Talks at UCF College of Education", time: "4.00 pm - 8.00 pm", loc: "Dhaka Bangladesh" },
       { id: 2, img: eventImg2, day: "10", month: "APR", title: "Summer Course Starts From June", time: "4.00 pm - 8.00 pm", loc: "Dhaka Bangladesh" },
       { id: 3, img: eventImg3, day: "10", month: "APR", title: "Importance of Research Seminar", time: "4.00 pm - 8.00 pm", loc: "Dhaka Bangladesh" }
+    ],
+
+    blogTitle: "Our Latest Blog",
+    blogDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet, vestibulum euismod nullam at entum.",
+    readMore: "Read More...",
+    blogList: [
+      { id: 1, img: blogImg1, title: "Product Marketing Creative Camping Brand Image", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet, vestibulum euismod nullam at entum." },
+      { id: 2, img: blogImg2, title: "Product Marketing Creative Camping Brand Image", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet, vestibulum euismod nullam at entum." },
+      { id: 3, img: blogImg3, title: "Product Marketing Creative Camping Brand Image", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet, vestibulum euismod nullam at entum." }
     ]
   }
 };
@@ -178,6 +210,30 @@ const Main = ({ lang }) => {
               <svg className="play-icon" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M8 5v14l11-7z" />
               </svg>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ================= NEW SECTION: STATS (STATISTIKA) ================= */}
+      <section className="stats-section">
+        <div className="container stats-container">
+          <div className="stats-grid">
+            <div className="stat-counter-item">
+              <h2>85+</h2>
+              <p>Teachers</p>
+            </div>
+            <div className="stat-counter-item">
+              <h2>850+</h2>
+              <p>Students</p>
+            </div>
+            <div className="stat-counter-item">
+              <h2>55+</h2>
+              <p>Courses</p>
+            </div>
+            <div className="stat-counter-item">
+              <h2>25+</h2>
+              <p>Country</p>
             </div>
           </div>
         </div>
@@ -317,6 +373,31 @@ const Main = ({ lang }) => {
                       <span>{event.loc}</span>
                     </div>
                   </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ================= NEW SECTION: LATEST BLOG ================= */}
+      <section className="blog-section">
+        <div className="container">
+          <div className="blog-section-header">
+            <h2 className="blog-main-title">{t.blogTitle}</h2>
+            <p className="blog-sub-desc">{t.blogDesc}</p>
+          </div>
+
+          <div className="blog-grid">
+            {t.blogList.map((blog) => (
+              <div className="blog-card" key={blog.id}>
+                <div className="blog-img-wrapper">
+                  <img src={blog.img} alt={blog.title} className="blog-card-img" />
+                </div>
+                <div className="blog-card-body">
+                  <h3 className="blog-card-title">{blog.title}</h3>
+                  <p className="blog-card-desc">{blog.desc}</p>
+                  <a href="#readmore" className="blog-readmore-btn">{t.readMore}</a>
                 </div>
               </div>
             ))}
