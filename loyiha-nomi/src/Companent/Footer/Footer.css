@@ -1,0 +1,189 @@
+/* ==========================================
+   YANGI SECTION: FOOTER DESIGN (image_5afdbb)
+========================================== */
+.main-footer {
+  background-color: #e3effe; /* Rasmda ko'rsatilgan och havorang fon */
+  padding: 80px 0 60px 0;
+  font-family: 'Poppins', sans-serif;
+  color: #1e2a3b;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr 0.8fr 1.2fr; /* Ustunlar proporsiyasi */
+  gap: 40px;
+}
+
+.footer-col {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Logo va Tavsif */
+.footer-logo-title {
+  font-size: 26px;
+  font-weight: 700;
+  color: #0c1b33;
+  margin-bottom: 20px;
+}
+
+.footer-desc-text {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #505d75;
+  margin-bottom: 25px;
+  max-width: 290px;
+}
+
+/* Ijtimoiy tarmoqlar (Follow Us) */
+.footer-social-wrapper .social-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #0c1b33;
+  margin-bottom: 15px;
+}
+
+.social-links-grid {
+  display: flex;
+  gap: 12px;
+}
+
+.social-btn {
+  width: 40px;
+  height: 40px;
+  background-color: #ffffff;
+  color: #0066ff; /* Asosiy ko'k rang */
+  border-radius: 4px; /* Rasmda biroz qayrilgan to'rtburchak */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+  text-decoration: none;
+}
+
+.social-btn svg {
+  width: 18px;
+  height: 18px;
+}
+
+/* Har bir ijtimoiy tarmoq ustiga borgandagi chiroyli effekt */
+.social-btn:hover {
+  background-color: #0066ff;
+  color: #ffffff;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 102, 255, 0.25);
+}
+
+/* Linklar Ustunlari Sarlavhasi */
+.footer-col-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #0c1b33;
+  margin-bottom: 25px;
+  position: relative;
+}
+
+.footer-links-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.footer-links-list li a {
+  font-size: 14px;
+  color: #505d75;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.2s ease;
+  font-weight: 500;
+}
+
+/* Rasmda ko'rsatilgan linklar oldidagi ko'k iqoncha (>) */
+.footer-links-list li a .arrow-icon {
+  color: #0066ff;
+  font-size: 11px;
+  transition: transform 0.2s ease;
+}
+
+.footer-links-list li a:hover {
+  color: #0066ff;
+  padding-left: 4px; /* Hover bo'lganda o'ngga suriladi */
+}
+
+.footer-links-list li a:hover .arrow-icon {
+  transform: translateX(2px);
+}
+
+/* Kontaktlar Bo'limi */
+.footer-contact-block {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.contact-item-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.contact-icon-nocircle {
+  color: #0c1b33; /* Rasmda belgilar to'q rangda */
+  width: 18px;
+  height: 18px;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.contact-icon-nocircle svg {
+  width: 100%;
+  height: 100%;
+}
+
+.contact-text {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #505d75;
+  font-weight: 500;
+}
+
+.contact-text.link-style {
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.contact-text.link-style:hover {
+  color: #0066ff;
+}
+
+/* ==========================================
+   FOOTER RESPONSIVE (MEDIA QUERIES)
+========================================== */
+@media (max-width: 992px) {
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr); /* Planshetda 2 qator 2 ustun */
+    gap: 40px;
+  }
+  .footer-desc-text {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .main-footer {
+    padding: 60px 0 40px 0;
+  }
+  .footer-container {
+    grid-template-columns: 1fr; /* Mobil telefonda barcha ustunlar 1 qatorga tushadi */
+    gap: 35px;
+  }
+  .footer-col-title {
+    margin-bottom: 15px;
+  }
+}
