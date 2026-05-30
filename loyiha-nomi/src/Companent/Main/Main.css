@@ -817,10 +817,7 @@
   background-color: #0052cc;
 }
 
-/* ==========================================
-   RESPONSIVE MOSLASHUVCHANLIK
-========================================== */
-@media (max-width: 992px) {
+  @media (max-width: 992px) {
   .courses-grid, .mentors-grid, .events-grid, .blog-grid, .testimonials-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -844,7 +841,6 @@
 }
 
 @media (max-width: 768px) {
-  /* Slider chetidagi arrow tugmalarni planshet/mobil o'lchamda yashirish yoki moslash */
   .slider-arrow-btn {
     display: none;
   }
